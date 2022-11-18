@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box, Stack } from '@chakra-ui/react';
+import Header from './components/header';
+import Routing from './routes/routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Box>
+      <Header />
+      <Stack
+        direction={{
+          sm: "column",
+          md: "row",
+        }}
+        justifyContent="space-between"
+        my={5}
+        mx={10}
+      >
+      </Stack>
+    </Box>
   );
 }
 
